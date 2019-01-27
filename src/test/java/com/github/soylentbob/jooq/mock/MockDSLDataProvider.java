@@ -22,6 +22,12 @@ public class MockDSLDataProvider implements MockDataProvider {
     private final SQLDialect dialect;
     private Map<String, MockResult[]> results = new HashMap<>();
 
+    /**
+     * Creates a new instance.
+     *
+     * @param dialect The {@link SQLDialect} that should be used by this instance.
+     *                This parameter may not be null.
+     */
     public MockDSLDataProvider(SQLDialect dialect) {
         this.dialect = requireNonNull(dialect, "The dialect may not be null");
     }
