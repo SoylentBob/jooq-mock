@@ -1,9 +1,9 @@
 # jOOQ Mock
 
 
-I love building applications that make use of jOOQ to integrate a database, but I hate testing them, because testing the application using the built-in tools is verbose and error prone, and I always feel like I'm taking a lot of time writing them.
+I love building applications that make use of [jOOQ](https://github.com/jOOQ/jOOQ/) to integrate a database, but I hate testing them, because testing the application using the built-in tools is verbose and error prone, and I always feel like I'm taking a lot of time writing them.
 
-The intention behind this project is to make testing code that integrates with jOOQ as easy as mocking an interface in your tests using something like Mockito.
+The intention behind this project is to make testing code that integrates with jOOQ as easy as mocking an interface in your tests using something like [Mockito](https://site.mockito.org/).
 
 Currently this is just an experimental project that I maintain in my spare time.
 
@@ -15,5 +15,4 @@ By using this class you can simplify building a `MockDataProvider` and the `DSLC
 
 ## Examples
 
-The examples provided in this project are based on the bookstore data model taken directly from jOOQs examples.
-
+The examples provided in this project are based on the bookstore data model taken directly from [jOOQs examples](https://github.com/jOOQ/jOOQ/tree/master/jOOQ-examples/jOOQ-kotlin-example/src/main/java/org/jooq/example/db/h2).
