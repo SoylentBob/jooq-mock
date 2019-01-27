@@ -16,3 +16,5 @@ By using this class you can simplify building a `MockDataProvider` and the `DSLC
 ## Examples
 
 The examples provided in this project are based on the bookstore data model taken directly from [jOOQs examples](https://github.com/jOOQ/jOOQ/tree/master/jOOQ-examples/jOOQ-kotlin-example/src/main/java/org/jooq/example/db/h2).
+
+The exemplary tests can be found in this [directory](https://github.com/SoylentBob/jooq-mock/tree/master/src/test/java/com/github/soylentbob/sql).
