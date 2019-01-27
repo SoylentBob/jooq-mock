@@ -5,7 +5,7 @@ I love building applications that make use of [jOOQ](https://github.com/jOOQ/jOO
 
 The intention behind this project is to make testing code that integrates with jOOQ as easy as mocking an interface in your tests using something like [Mockito](https://site.mockito.org/).
 
-To find out more about my reasoning pleas go ahead and read this post: https://soylentbob.github.io/posts/mocking-jooq.html
+To find out more about my reasoning please go ahead and read this post: https://soylentbob.github.io/posts/mocking-jooq.html
 
 Currently this is just an experimental project that I maintain in my spare time.
 
