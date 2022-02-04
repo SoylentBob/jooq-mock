@@ -2,7 +2,9 @@ package com.github.soylentbob.jooq.mock;
 
 import org.jooq.DSLContext;
 import org.jooq.Query;
+import org.jooq.Record;
 import org.jooq.SQLDialect;
+import org.jooq.TableLike;
 import org.jooq.impl.DSL;
 import org.jooq.tools.jdbc.MockConnection;
 
@@ -37,6 +39,10 @@ public class MockDSLBuilder {
 
     public MockDSLBuilderWhen when(final Query query) {
         return new MockDSLBuilderWhen(query, dataProvider, this);
+    }
+
+    public <Q extends Query & TableLike<R>, R extends Record> MockDSLBuilderWhenTableLike<Q, R> whenSelectedFieldsQuery(final Q query) {
+        return new MockDSLBuilderWhenTableLike<>(query, dataProvider, this);
     }
 
     /**
