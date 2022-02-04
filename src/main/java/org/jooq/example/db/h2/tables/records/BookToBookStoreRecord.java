@@ -3,15 +3,14 @@
  */
 package org.jooq.example.db.h2.tables.records;
 
-
-import javax.annotation.Generated;
-
 import org.jooq.Field;
 import org.jooq.Record2;
 import org.jooq.Record3;
 import org.jooq.Row3;
 import org.jooq.example.db.h2.tables.BookToBookStore;
 import org.jooq.impl.UpdatableRecordImpl;
+
+import javax.annotation.processing.Generated;
 
 
 /**

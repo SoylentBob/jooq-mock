@@ -4,10 +4,9 @@
 package org.jooq.example.db.h2.tables.pojos;
 
 
+import javax.annotation.processing.Generated;
 import java.io.Serializable;
 import java.sql.Date;
-
-import javax.annotation.Generated;
 
 
 /**

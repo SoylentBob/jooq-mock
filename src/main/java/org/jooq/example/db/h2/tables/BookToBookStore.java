@@ -7,8 +7,6 @@ package org.jooq.example.db.h2.tables;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.annotation.Generated;
-
 import org.jooq.Field;
 import org.jooq.ForeignKey;
 import org.jooq.Index;
@@ -24,6 +22,8 @@ import org.jooq.example.db.h2.Public;
 import org.jooq.example.db.h2.tables.records.BookToBookStoreRecord;
 import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
+
+import javax.annotation.processing.Generated;
 
 
 /**

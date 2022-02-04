@@ -4,8 +4,6 @@
 package org.jooq.example.db.h2;
 
 
-import javax.annotation.Generated;
-
 import org.jooq.Index;
 import org.jooq.OrderField;
 import org.jooq.example.db.h2.tables.Author;
@@ -13,6 +11,8 @@ import org.jooq.example.db.h2.tables.Book;
 import org.jooq.example.db.h2.tables.BookStore;
 import org.jooq.example.db.h2.tables.BookToBookStore;
 import org.jooq.impl.Internal;
+
+import javax.annotation.processing.Generated;
 
 
 /**

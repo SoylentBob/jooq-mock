@@ -3,9 +3,6 @@
  */
 package org.jooq.example.db.h2;
 
-
-import javax.annotation.Generated;
-
 import org.jooq.ForeignKey;
 import org.jooq.Identity;
 import org.jooq.UniqueKey;
@@ -18,6 +15,8 @@ import org.jooq.example.db.h2.tables.records.BookRecord;
 import org.jooq.example.db.h2.tables.records.BookStoreRecord;
 import org.jooq.example.db.h2.tables.records.BookToBookStoreRecord;
 import org.jooq.impl.Internal;
+
+import javax.annotation.processing.Generated;
 
 
 /**
