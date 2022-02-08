@@ -5,10 +5,17 @@ package com.github.soylentbob;
  */
 public interface Book {
 
-    /**
-     * Renames the book.
-     *
-     * @param title The new title that the book should have.
-     */
-    public void rename(String title);
+  /**
+   * The ID of the book.
+   *
+   * @return The ID of the book.
+   */
+  Integer id();
+
+  /**
+   * Renames the book.
+   *
+   * @param title The new title that the book should have.
+   */
+  void rename(String title);
 }

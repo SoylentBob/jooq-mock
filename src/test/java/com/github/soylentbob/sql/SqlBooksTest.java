@@ -1,5 +1,6 @@
 package com.github.soylentbob.sql;
 
+import com.github.soylentbob.Books;
 import com.github.soylentbob.jooq.mock.MockDSLBuilder;
 import org.assertj.core.api.SoftAssertions;
 import org.jooq.DSLContext;
@@ -83,6 +84,40 @@ public class SqlBooksTest {
             .isEqualTo("Die Leiden des jungen Werthers");
     assertions.assertThat(result.get(Tables.BOOK.ID))
             .isEqualTo(1);
+
+    assertions.assertAll();
+  }
+
+  /**
+   * Multiple mocked results should be handled correctly.
+   */
+  @Test
+  public void multipleMockedResults() {
+    final BookRecord firstRecord = new BookRecord();
+    firstRecord.setId(1);
+
+    final BookRecord secondRecord = new BookRecord();
+    secondRecord.setId(2);
+
+    DSLContext sql = new MockDSLBuilder(SQLDialect.H2)
+            .when(DSL.using(SQLDialect.H2)
+                    .selectFrom(Tables.BOOK)
+                    .where(Tables.BOOK.ID.eq(1)))
+            .thenReturn(firstRecord)
+            .when(DSL.using(SQLDialect.H2)
+                    .selectFrom(Tables.BOOK)
+                    .where(Tables.BOOK.ID.eq(2)))
+            .thenReturn(secondRecord)
+            .context();
+
+    final Books books = new SqlBooks(sql);
+
+    final SoftAssertions assertions = new SoftAssertions();
+
+    assertions.assertThat(books.fetchBookById(1))
+            .hasValueSatisfying(book -> assertThat(book.id()).isEqualTo(1));
+    assertions.assertThat(books.fetchBookById(2))
+            .hasValueSatisfying(book -> assertThat(book.id()).isEqualTo(2));
 
     assertions.assertAll();
   }

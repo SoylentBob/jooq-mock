@@ -32,6 +32,14 @@ public class SqlBook implements Book {
      * {@inheritDoc}
      */
     @Override
+    public Integer id() {
+        return record.getId();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public void rename(final String title) {
         int updatedRows = sql.update(Tables.BOOK).set(Tables.BOOK.TITLE, title).where(Tables.BOOK.ID.eq(record.getId())).execute();
 
